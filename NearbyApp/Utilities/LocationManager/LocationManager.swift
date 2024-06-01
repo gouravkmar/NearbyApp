@@ -61,13 +61,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         completion?(nil, error)
     }
     
-    func locationUpdated(status : locationFetchStatus){
-        if status == .success {
-            
-        }else {
-            
-        }
-        
-        
-    }
+//    func locationUpdated(status : locationFetchStatus){
+//        if status == .success {
+//            
+//        }else {
+//            
+//        }
+//        
+//        
+//    }
 }

@@ -17,21 +17,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hyS-r8-S1u">
-                                <rect key="frame" x="0.0" y="103" width="393" height="665"/>
+                                <rect key="frame" x="0.0" y="164" width="393" height="604"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NE2-aB-6sN">
+                                <rect key="frame" x="-2" y="773" width="397" height="26"/>
+                            </slider>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="73h-D7-1jK">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xyi-am-xse"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NE2-aB-6sN" secondAttribute="bottom" constant="20" id="2fq-dY-6AJ"/>
                             <constraint firstItem="hyS-r8-S1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7gg-3z-Ll1"/>
-                            <constraint firstItem="hyS-r8-S1u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yrc-sW-7AL"/>
+                            <constraint firstItem="hyS-r8-S1u" firstAttribute="top" secondItem="73h-D7-1jK" secondAttribute="bottom" constant="5" id="8vo-TT-o6I"/>
+                            <constraint firstItem="NE2-aB-6sN" firstAttribute="top" secondItem="hyS-r8-S1u" secondAttribute="bottom" constant="5" id="EaR-XK-Scd"/>
+                            <constraint firstItem="NE2-aB-6sN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ixu-3x-kNG"/>
+                            <constraint firstItem="73h-D7-1jK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Su1-as-gnb"/>
+                            <constraint firstItem="73h-D7-1jK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TTS-xL-A4p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hyS-r8-S1u" secondAttribute="bottom" constant="50" id="act-ab-o8F"/>
+                            <constraint firstItem="73h-D7-1jK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fSJ-zc-gBI"/>
+                            <constraint firstItem="NE2-aB-6sN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fyD-YF-cwr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hyS-r8-S1u" secondAttribute="trailing" id="iLv-yy-86K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Rl-KZ-QZe"/>
                     <connections>
+                        <outlet property="searchBar" destination="73h-D7-1jK" id="gBj-Ex-sLk"/>
+                        <outlet property="sliderBar" destination="NE2-aB-6sN" id="rfy-Qb-8Dk"/>
                         <outlet property="tableview" destination="hyS-r8-S1u" id="8BX-BU-OPp"/>
                     </connections>
                 </viewController>

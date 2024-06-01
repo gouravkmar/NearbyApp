@@ -40,7 +40,7 @@ class AppDataManager {
         self.locationManager = LocationManager.shared
         self.networkManager = NetworkManager.shared
         userData = UserData(perPage: 10, page: 1)
-        
+        setAppData()
     }
     func setAppData(){
         setUserData(completion: {status in
